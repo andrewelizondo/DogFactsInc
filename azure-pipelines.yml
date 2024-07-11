@@ -32,5 +32,5 @@ stages:
         command: 'image'
         clientid: $(WIZ_SECRET_ID)
         secret: $(WIZ_SECRET_KEY)
-        image: '$(tag)'
+        image: $(tag)
         policyHitsOnly: true
