@@ -27,3 +27,10 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
         tags: |
           $(tag)
+    - task: wiz@0
+      inputs:
+        command: 'image'
+        clientid: $(WIZ_SECRET_ID)
+        secret: $(WIZ_SECRET_KEY)
+        image: '$(tag)'
+        policyHitsOnly: true
