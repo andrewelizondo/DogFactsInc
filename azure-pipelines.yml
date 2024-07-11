@@ -26,7 +26,6 @@ stages:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/app/Dockerfile'
         tags: |
-          $(tag)
           dogfactsapp:latest
     - task: wiz@0
       inputs:
